@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Pandeportes | Instituto Panameño de Deportes</title>
+    <link rel="shortcut icon" href="img/icon.png">
 </head>
 <body>
-    
+
+    <!-- header Section-->
+    <div class="container">
+        <header>
+            <a href="/">
+                <img src="/img/logo.png" alt="logo de Pandeportes">
+            </a>
+        </header>
+    </div>
+
+    <!-- menu bottons Section-->
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+          <li><a href='http://'>Inicio</a></li>
+          <li><a class='dropdown-arrow' href='http://'>Institución</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Autoridades</a></li>
+              <li><a href='http://'>Misión & Visión</a></li>
+              <li><a href='http://'>Reseña Histórica</a></li>
+              <li><a href='http://'>Deportes</a></li>
+              <li><a href='http://'>Base Legal</a></li>
+            </ul>
+          </li>
+          <li><a class='dropdown-arrow' href='http://'>Prensa</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Boletín Institucional</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Videos</a></li>
+          <li><a class='dropdown-arrow' href='http://'>Transparencia</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Solicitud jurídica</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Contáctenos</a></li>
+        </ul>
+      </nav>
+
+      <script>
+        // menu bottons logic functions
+        function updatemenu() {
+            if (document.getElementById('responsive-menu').checked == true) {
+                document.getElementById('menu').style.borderBottomRightRadius = '0';
+                document.getElementById('menu').style.borderBottomLeftRadius = '0';
+            } else {
+                document.getElementById('menu').style.borderRadius = '0px';
+            }
+        }
+
+      </script>
+
 </body>
 </html>
