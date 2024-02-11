@@ -31,6 +31,12 @@
 }
 
 /* Navbar Menu Styles */
+nav {
+	position: sticky;
+    top: 0;
+	z-index: 1;
+}
+
 #menu {
 	background: #F4F4F4;
 	height: 65px;
@@ -60,7 +66,6 @@
 	text-decoration: none;
 	color: #002749;
 	font-size: 20px;
-
 }
 
 #menu a.dropdown-arrow:after {
@@ -213,16 +218,12 @@
   align-items: center;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 40px 0;
 }
 
 .container-body .container-card .card {
   position: relative;
-  min-width: 320px;
+  min-width: 335px;
   height: 440px;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(102, 81, 81, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   margin: 30px;
   transition: 0.5s;
@@ -253,10 +254,6 @@
   align-items: center;
   overflow: hidden;
   transition: 0.5s;
-}
-
-.container-body .container-card .card .box:hover {
-  transform: translateY(-50px);
 }
 
 .container-body .container-card .card .box:before {
@@ -332,19 +329,15 @@
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		max-width: 0;
-		margin: 20px 0;
+		margin: 30px 0;
 	  }
 	  
 	  .container-body .container-card .card {
 		position: relative;
-		min-width: 240px;
+		min-width: 320px;
 		height: 340px;
-		box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-		  inset -5px -5px 15px rgba(102, 81, 81, 0.1),
-		  5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
 		border-radius: 15px;
-		margin: 30px;
+		margin: 0;
 		transition: 0.5s;
 	  }
 	  
@@ -373,10 +366,6 @@
 		align-items: center;
 		overflow: hidden;
 		transition: 0.5s;
-	  }
-	  
-	  .container-body .container-card .card .box:hover {
-		transform: translateY(-50px);
 	  }
 	  
 	  .container-body .container-card .card .box:before {
@@ -479,7 +468,7 @@
 	border-radius: 10px;
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
-	width: 300px;
+	width: 340px;
   }
 
   .card-header img {
@@ -500,7 +489,12 @@
   .card-body p {
 	font-size: 17px;
 	margin: 0 0 20px;
-	color: #818181;
+	color: #686868;
+	transition: 0.5s ease;
+  }
+
+  .card-body p:hover {
+	color: #979797;
   }
 
   .card-body a {
